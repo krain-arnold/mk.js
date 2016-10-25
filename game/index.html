@@ -90,7 +90,7 @@
                         }
 
                     },
-                    isHost: /^yes$/i.test(prompt('Are you going to be host?')),
+                    isHost: /^yes$/i.test(confirm('Are you going to be host?')),
                     gameName: prompt('Enter game name:'),
                     gameType: 'network'
                 };
