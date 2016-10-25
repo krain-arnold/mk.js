@@ -26,8 +26,8 @@ canvas {
     background-color: #777;
 }
 body, html {
-    background-color: black;
-    color: #fff;
+    background-color: white;
+    color: #000000;
     font-family: Verdana;
     font-size: 12px;
 }
