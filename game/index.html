@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>mk.js</title>
     <script src="src/movement.js"></script>
     <script src="src/mk.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <link rel="stylesheet" href="styles/styles.css" />
-</head>
-<body>
-
+  </head>
+  <body>
     <table>
-    <thead>
+      <thead>
         <th>
-            Shadowman Arena
+            <h3>Shadowman Arena</h3>
         </th>
-    </thead>
+      </thead>
     <tbody>
-        <tr>
-            <td>
-                <div id="parent">
-                    <div id="utils">
-                        <div id="player1Name" class="playerName">Irena</div>
-                        <div id="player1LifeBar" class="lifebar"><div class="life" id="player1Life"></div></div>
-                        <div id="player2Name" class="playerName">Consultant</div>
-                        <div id="player2LifeBar" class="lifebar"><div class="life" id="player2Life"></div></div>
-                    </div>
-                    <div id="arena">
-                    </div>
-                    <div id="loading">
-                        <span class="loadingLabel">Loading...</span>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-<audio src="yaketysax.mp3" preload="auto" controls="yes" autoplay="autoplay"></audio>
-
-
-                <h1>Instructions</h1>
-                <p>
-                    <ul class="instructions-list">
-                        <li>As host answer "yes" to first question, then choose a name for the session, e.g. "abc"</li>
-			<li>As guest answer "no", and connect to an existing game, e.g. "abc"</li>
-                    </ul>
-                </p>
-            </td>
-        </tr>
+      <tr>
+        <td>
+          <div id="parent">
+            <div id="utils">
+              <div id="player1Name" class="playerName">Irena</div>
+              <div id="player1LifeBar" class="lifebar"><div class="life" id="player1Life"></div></div>
+              <div id="player2Name" class="playerName">Consultant</div>
+              <div id="player2LifeBar" class="lifebar"><div class="life" id="player2Life"></div></div>
+            </div>
+            <div id="arena"></div>
+            <div id="loading">
+              <span class="loadingLabel">Loading...</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <center><audio src="yaketysax.mp3" preload="auto" controls="yes" autoplay="autoplay"></audio></center>
+          <h1>Instructions</h1>
+          <p>
+            * As host answer "yes" to first question, then choose a name for the session, e.g. "abc"<br>
+            * As guest answer "no", and connect to an existing game, e.g. "abc"
+          </p>
+        </td>
+      </tr>
     </tbody>
     <div class="manual">
     </div>

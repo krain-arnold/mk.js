@@ -26,8 +26,8 @@ canvas {
     background-color: #777;
 }
 body, html {
-    background-color: white;
-    color: #000000;
+    background-color: #004153;
+    color: #FFFFFF;
     font-family: Verdana;
     font-size: 12px;
 }
@@ -79,7 +79,7 @@ body, html {
     float: right;
 }
 .playerName {
-    color: white;
+    color: black;
     font-weight: bold;
     font-style: italic;
     font-family: Verdana;
