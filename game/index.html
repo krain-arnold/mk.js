@@ -1,102 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>mk.js</title>
-    <script src="src/movement.js"></script>
-    <script src="src/mk.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
-  <body>
-    <table>
-      <thead>
-        <th>
-            <h3>Shadowman Arena</h3>
-        </th>
-      </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div id="parent">
-            <div id="utils">
-              <div id="player1Name" class="playerName">Irena</div>
-              <div id="player1LifeBar" class="lifebar"><div class="life" id="player1Life"></div></div>
-              <div id="player2Name" class="playerName">Consultant</div>
-              <div id="player2LifeBar" class="lifebar"><div class="life" id="player2Life"></div></div>
-            </div>
-            <div id="arena"></div>
-            <div id="loading">
-              <span class="loadingLabel">Loading...</span>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <center><audio src="yaketysax.mp3" preload="auto" controls="yes" autoplay="autoplay"></audio></center>
-          <h1>Instructions</h1>
-          <p>
-            * As host answer "yes" to first question, then choose a name for the session, e.g. "abc"<br>
-            * As guest answer "no", and connect to an existing game, e.g. "abc"
-          </p>
-        </td>
-      </tr>
-    </tbody>
-    <div class="manual">
-    </div>
-    <script>
-        (function () {
-
-            function $(id) {
-                return document.getElementById(id);
-            }
-
-            function setLife(container, life) {
-                container.style.width = life + '%';
-            }
-
-            document.onkeydown = function (e) {
-                //if (e.keyCode === 32) {
-                //    window.location.reload();
-                //}
-            };
-
-            (function () {
-                var startGame = function () {
-                        $('loading').style.visibility = 'hidden';
-                        $('arena').style.visibility = 'visible';
-                        $('utils').style.visibility = 'visible';
-                    };
-                var options = {
-                    arena: {
-                        container: document.getElementById('arena'),
-                        arena: mk.arenas.types.THRONE_ROOM
-                    },
-                    fighters: [{ name: 'Subzero' }, { name: 'Kano' }],
-                    callbacks: {
-                        attack: function (f, o, l) {
-                            if (o.getName() === 'kano') {
-                                setLife($('player2Life'), o.getLife());
-                            } else {
-                                setLife($('player1Life'), o.getLife());
-                            }
-                        }
-
-                    },
-                    isHost: /^yes$/i.test(prompt('Are you going to be host (yes/no)?')),
-                    gameName: prompt('Enter game name:'),
-                    gameType: 'network'
-                };
-
-                function startNewGame() {
-                    mk.start(options).ready(function () {
-                        startGame();
-                    });
-                }
-                startNewGame();
-            }());
-
-        }());
-    </script>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<title>Coming Soon to a Browser Near You</title>		
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
+		<script type='text/javascript' src='javascripts/jquery.tipsy.js'></script>
+		<script type='text/javascript'>
+		$(function() {
+			$('#tipsy').tipsy({fade: true, gravity: 's'});
+		});
+		</script>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body>
+		<div class="wrapper">
+			<!--<img src="images/logo.png" alt="YourLogo" title="YourLogo"/>-->
+			<div class="hr"></div>
+			<h1>PT.Next</h1>
+			<p>Coming soon to a browser near you. <strong> But, </strong></p>
+						
+			<section class="progress">
+				<div class="progress-bar-container" id="tipsy" title="87% Complete"> <!-- Edit this title for the tooltip pop up -->
+					<article class="progress-bar" style="width:87%"  ></article> <!-- Edit the width percentage value to indicate progress -->
+				</div>
+				<article class="txt-launch-day-hat"></article>
+			</section>
+			
+			<div class="hr"></div>
+			<div class="hr"><center><a href="/game.html"><h2>Launch Demo</h2></a></center></div>
+			<div class="hr"></div>
+		</div>
+	</body>
 </html>
